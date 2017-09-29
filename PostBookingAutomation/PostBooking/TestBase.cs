@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using NUnit.Framework.Interfaces;
 
 namespace PostBooking
 {
@@ -18,8 +19,14 @@ namespace PostBooking
             driver.Navigate().GoToUrl("http://www.easyjet.com");           
         }
 
-        [OneTimeTearDown]
+        [TearDown]
         public void TearDown()
+        {
+            driver.Manage().Cookies.DeleteAllCookies();
+        }
+
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
         {
            // driver.Quit();
         }

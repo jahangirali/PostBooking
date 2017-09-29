@@ -9,8 +9,13 @@ using OpenQA.Selenium;
 namespace PostBooking
 {
     [TestFixture]
-    public class SignInTests
+    public class SignInTests :TestBase
     {
+        [Test]
+        public void LoginToPostBooking()
+        {
+            
+        }
 
     }
 }

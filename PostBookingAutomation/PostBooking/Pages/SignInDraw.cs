@@ -11,17 +11,22 @@ namespace PostBooking.Pages
 {
     public class SignInPage : TestBase
     {
-        private IWebDriver driver { get; }
+        private IWebDriver Driver { get; }
         private static readonly By PageSelector = By.CssSelector("div[class='drawer-section sign-in']");
 
-        public SignInDraw(IWebDriver driver) : base(driver, PageSelector, true)
-        {
-            //Driver = driver;
-        }
+        //public SignInDraw(IWebDriver driver) : base(driver, PageSelector, true)
+        //{
+        //    Driver = driver;
+        //}
 
 
         [FindsBy(How = How.Id, Using = "signin-username")] private IWebElement EmailAddress;
         [FindsBy(How = How.Id, Using = "signin-password")] private IWebElement Password;
         [FindsBy(How = How.Id, Using = "signin-login")] private IWebElement SignIn;
+
+
+
+
+
     }
 }
