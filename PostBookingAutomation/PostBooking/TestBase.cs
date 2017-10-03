@@ -7,17 +7,21 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework.Interfaces;
+using PostBooking.Draws;
 
 namespace PostBooking
 {
     public class TestBase
     {
-        IWebDriver driver = new ChromeDriver();
+        public IWebDriver driver = new ChromeDriver();
+
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            driver.Navigate().GoToUrl("http://www.easyjet.com");           
+            driver.Navigate().GoToUrl("http://www.easyjet.com");
+            
         }
+
 
         [TearDown]
         public void TearDown()

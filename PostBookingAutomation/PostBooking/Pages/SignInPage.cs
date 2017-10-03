@@ -14,10 +14,11 @@ namespace PostBooking.Pages
         private IWebDriver Driver { get; }
         private static readonly By PageSelector = By.CssSelector("div[class='drawer-section sign-in']");
 
-        //public SignInDraw(IWebDriver driver) : base(driver, PageSelector, true)
-        //{
-        //    Driver = driver;
-        //}
+        public SignInPage(IWebDriver driver) : base( )
+        {
+            Driver = driver;
+            return;
+        }
 
 
         [FindsBy(How = How.Id, Using = "signin-username")] private IWebElement EmailAddress;
@@ -25,7 +26,10 @@ namespace PostBooking.Pages
         [FindsBy(How = How.Id, Using = "signin-login")] private IWebElement SignIn;
 
 
-
+        public void ClickSignIn()
+        {
+            SignIn.Click();
+        }
 
 
     }
