@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Actions\Waits.cs" />
     <Compile Include="Draws\CookiePolicyDraw.cs" />
+    <Compile Include="Pages\SearchPodPage.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="Tests\SignInTests.cs" />
     <Compile Include="Pages\SignInPage.cs" />
