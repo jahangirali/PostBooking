@@ -20,6 +20,7 @@ namespace PostBooking
             var signInPage = new SignInPage(driver);
 
             cookiePolicyDraw.ClickCloseButton();
+            signInPage.ClickSignIn();
 
         }
 

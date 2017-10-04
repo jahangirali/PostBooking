@@ -19,8 +19,9 @@ namespace PostBooking.Draws
             return;
         }
 
+        [FindsBy(How = How.CssSelector, Using = "button[ng-click='DoAcceptCookiePolicy()']")] private IWebElement AcceptButton;
         [FindsBy(How = How.CssSelector, Using = "button[ng-click='DoAcceptCookiePolicy()']")] private IWebElement CloseButton;
-
+        
         public void ClickCloseButton()
         {
             driver.Manage().Timeouts().ImplicitWait.Seconds.Equals(5);

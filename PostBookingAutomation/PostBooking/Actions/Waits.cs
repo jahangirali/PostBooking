@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium.Support;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+
 
 namespace PostBooking.Actions
 {
-    public class Waits
+    public static class Waits
     {
-
-
-        public void WaitForElement()
+        public static void WaitForDrawerToClose(IWebDriver driver)
         {
-            
+            //new WebDriverWait(driver, TimeSpan.FromSeconds());
+
         }
     }
 }
