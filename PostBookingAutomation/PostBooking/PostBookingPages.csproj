@@ -59,7 +59,7 @@
     <Compile Include="Draws\CookiePolicyDraw.cs" />
     <Compile Include="Pages\SearchPodPage.cs" />
     <Compile Include="TestBase.cs" />
-    <Compile Include="Tests\SignInTests.cs" />
+    <Compile Include="Tests\BagsTests.cs" />
     <Compile Include="Draws\SignInDraw.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -22,11 +22,10 @@ namespace PostBooking
             driver.Navigate().GoToUrl("https://uat2.tc-nonprod.easyjet.com/en/");
         }
 
-
         [TearDown]
         public void TearDown()
         {
-            driver.Manage().Cookies.DeleteAllCookies();
+           // driver.Manage().Cookies.DeleteAllCookies();
         }
 
         [OneTimeTearDown]

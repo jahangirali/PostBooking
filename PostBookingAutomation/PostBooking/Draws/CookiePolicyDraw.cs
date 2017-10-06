@@ -24,8 +24,8 @@ namespace PostBooking.Draws
 
         public void ClickCloseButton()
         {
-            //driver.Manage().Timeouts().ImplicitWait.Seconds.Equals(5);
-            CloseButton.Click();
+           CloseButton.Click();
+           //Driver.Manage().Timeouts().ImplicitWait.Seconds.Equals(5);
         }
 
     }

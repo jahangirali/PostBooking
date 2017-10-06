@@ -11,7 +11,7 @@ using PostBooking.Pages;
 namespace PostBooking
 {
     [TestFixture]
-    public class SignInTests : TestBase
+    public class BagsTests : TestBase
     {
         [Test]
         public void GoToBagsPage()
@@ -20,14 +20,11 @@ namespace PostBooking
             var cookiePolicyDraw = new CookiePolicyDraw(driver);
 
             cookiePolicyDraw.ClickCloseButton();
-            var searchPodPage = new SearchPodPage(driver);
 
+            var searchPodPage = new SearchPodPage(driver);
             searchPodPage.EnterOriginAirport();
             searchPodPage.EnterDestinationAirportTextField();
-
-            //var signInPage = new SignInDraw(driver);
-            //signInPage.ClickSignIn();
-
+            
         }
 
     }

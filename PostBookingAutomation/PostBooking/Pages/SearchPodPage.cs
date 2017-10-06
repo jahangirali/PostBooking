@@ -16,7 +16,7 @@ namespace PostBooking.Pages
         public SearchPodPage(IWebDriver driver) : base()
         {
             Driver = driver;
-            return;
+            PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.CssSelector, Using = "div[class='ej-checkbox one-way-checkbox']")] private IWebElement OneWayCheckBox;
