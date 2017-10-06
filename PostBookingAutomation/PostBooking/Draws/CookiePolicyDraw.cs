@@ -16,12 +16,12 @@ namespace PostBooking.Draws
         public CookiePolicyDraw(IWebDriver driver)
         {
             Driver = driver;
-        PageFactory.InitElements(driver, this);
+            PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.CssSelector, Using = "button[ng-click='DoAcceptCookiePolicy()']")] private IWebElement AcceptButton;
         [FindsBy(How = How.CssSelector, Using = "button[ng-click='DoAcceptCookiePolicy()']")] private IWebElement CloseButton;
-        
+
         public void ClickCloseButton()
         {
             //driver.Manage().Timeouts().ImplicitWait.Seconds.Equals(5);

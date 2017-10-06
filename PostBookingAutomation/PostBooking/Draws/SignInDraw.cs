@@ -17,7 +17,7 @@ namespace PostBooking.Pages
         public SignInDraw(IWebDriver driver) : base( )
         {
             Driver = driver;
-            return;
+            PageFactory.InitElements(driver, this);
         }
         
         [FindsBy(How = How.Id, Using = "signin-username")] private IWebElement EmailAddress;

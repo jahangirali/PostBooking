@@ -22,8 +22,8 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "div[class='ej-checkbox one-way-checkbox']")] private IWebElement OneWayCheckBox;
         [FindsBy(How = How.CssSelector, Using = "input[name='origin']")] private IWebElement OriginAirportTextField;
         [FindsBy(How = How.CssSelector, Using = "input[name='destination']")] private IWebElement DestinationAirportTextField;
-        //origin
-
+        [FindsBy(How = How.CssSelector, Using = "button[ej-click-event='SubmitFlightSearch()']")] private IWebElement ShowFlightsButton;
+        
         public void EnterOriginAirport()
         {
             OriginAirportTextField.SendKeys("LTN"+ Keys.Enter);

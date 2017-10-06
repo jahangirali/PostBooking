@@ -14,14 +14,19 @@ namespace PostBooking
     public class SignInTests : TestBase
     {
         [Test]
-        public void LoginToPostBooking()
+        public void GoToBagsPage()
         {
 
             var cookiePolicyDraw = new CookiePolicyDraw(driver);
 
             cookiePolicyDraw.ClickCloseButton();
-            var signInPage = new SignInDraw(driver);
-            signInPage.ClickSignIn();
+            var searchPodPage = new SearchPodPage(driver);
+
+            searchPodPage.EnterOriginAirport();
+            searchPodPage.EnterDestinationAirportTextField();
+
+            //var signInPage = new SignInDraw(driver);
+            //signInPage.ClickSignIn();
 
         }
 
