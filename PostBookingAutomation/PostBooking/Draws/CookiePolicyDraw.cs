@@ -8,15 +8,15 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace PostBooking.Draws
 {
-    public class CookiePolicyDraw: TestBase
+    public class CookiePolicyDraw
     {
         private IWebDriver Driver { get; }
         private static readonly By PageSelector = By.CssSelector("div[class='drawer-section cookie-policy-drawer']");
 
-        public CookiePolicyDraw(IWebDriver driver) : base( )
+        public CookiePolicyDraw(IWebDriver driver)
         {
             Driver = driver;
-            return;
+        PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.CssSelector, Using = "button[ng-click='DoAcceptCookiePolicy()']")] private IWebElement AcceptButton;
@@ -24,7 +24,7 @@ namespace PostBooking.Draws
         
         public void ClickCloseButton()
         {
-            driver.Manage().Timeouts().ImplicitWait.Seconds.Equals(5);
+            //driver.Manage().Timeouts().ImplicitWait.Seconds.Equals(5);
             CloseButton.Click();
         }
 

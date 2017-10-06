@@ -11,15 +11,16 @@ using PostBooking.Pages;
 namespace PostBooking
 {
     [TestFixture]
-    public class SignInTests :TestBase
+    public class SignInTests : TestBase
     {
         [Test]
         public void LoginToPostBooking()
         {
+
             var cookiePolicyDraw = new CookiePolicyDraw(driver);
-            var signInPage = new SignInPage(driver);
 
             cookiePolicyDraw.ClickCloseButton();
+            var signInPage = new SignInDraw(driver);
             signInPage.ClickSignIn();
 
         }

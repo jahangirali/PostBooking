@@ -9,18 +9,17 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace PostBooking.Pages
 {
-    public class SignInPage : TestBase
+    public class SignInDraw : TestBase
     {
         private IWebDriver Driver { get; }
         private static readonly By PageSelector = By.CssSelector("div[class='drawer-section sign-in']");
 
-        public SignInPage(IWebDriver driver) : base( )
+        public SignInDraw(IWebDriver driver) : base( )
         {
             Driver = driver;
             return;
         }
-
-
+        
         [FindsBy(How = How.Id, Using = "signin-username")] private IWebElement EmailAddress;
         [FindsBy(How = How.Id, Using = "signin-password")] private IWebElement Password;
         [FindsBy(How = How.Id, Using = "signin-login")] private IWebElement SignIn;
