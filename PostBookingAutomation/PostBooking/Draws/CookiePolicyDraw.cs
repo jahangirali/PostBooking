@@ -28,5 +28,21 @@ namespace PostBooking.Draws
            //Driver.Manage().Timeouts().ImplicitWait.Seconds.Equals(5);
         }
 
+        public void ClickAcceptButton()
+        {
+            SwitchWindow(Driver);
+            AcceptButton.Click();
+            WaitUntilDrawerIsClosed();
+        }
+
+        private void SwitchWindow(IWebDriver driver)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void WaitUntilDrawerIsClosed()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
