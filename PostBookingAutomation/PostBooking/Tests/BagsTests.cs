@@ -19,7 +19,7 @@ namespace PostBooking
 
             var cookiePolicyDraw = new CookiePolicyDraw(driver);
 
-            cookiePolicyDraw.ClickCloseButton();
+            cookiePolicyDraw.ClickAcceptButton();
 
             var searchPodPage = new SearchPodPage(driver);
             searchPodPage.EnterOriginAirport();

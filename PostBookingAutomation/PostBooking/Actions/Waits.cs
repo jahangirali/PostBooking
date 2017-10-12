@@ -9,7 +9,7 @@ namespace PostBooking.Actions
     {
         public static void WaitForDrawerToClose(IWebDriver driver)
         {
-            //new WebDriverWait(driver, TimeSpan.FromSeconds());
+            //new WebDriverWait(driver, TimeSpan.FromSeconds("5"));
 
         }
     }
