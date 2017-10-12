@@ -8,12 +8,12 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace PostBooking.Pages
 {
-    public class SearchPodPage: TestBase
+    public class SearchPodPage
     {
         private IWebDriver Driver { get; }
         private static readonly By PageSelector = By.CssSelector("div[class='ej-checkbox one-way-checkbox']");
 
-        public SearchPodPage(IWebDriver driver) : base()
+        public SearchPodPage(IWebDriver driver) 
         {
             Driver = driver;
             PageFactory.InitElements(driver, this);
@@ -23,7 +23,13 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "input[name='origin']")] private IWebElement OriginAirportTextField;
         [FindsBy(How = How.CssSelector, Using = "input[name='destination']")] private IWebElement DestinationAirportTextField;
         [FindsBy(How = How.CssSelector, Using = "button[ej-click-event='SubmitFlightSearch()']")] private IWebElement ShowFlightsButton;
-        
+
+
+        public void SelectOneWayCheckBox()
+        {
+            OneWayCheckBox.Click();
+        }
+
         public void EnterOriginAirport()
         {
             OriginAirportTextField.SendKeys("LTN"+ Keys.Enter);

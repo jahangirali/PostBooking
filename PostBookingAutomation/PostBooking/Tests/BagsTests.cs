@@ -23,8 +23,7 @@ namespace PostBooking
 
             var searchPodPage = new SearchPodPage(driver);
             searchPodPage.EnterOriginAirport();
-            searchPodPage.EnterDestinationAirportTextField();
-            
+            searchPodPage.EnterDestinationAirportTextField();            
         }
 
     }
