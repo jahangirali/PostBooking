@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using PostBooking.Actions;
 
 namespace PostBooking.Pages
 {
@@ -20,9 +21,13 @@ namespace PostBooking.Pages
         }
 
         [FindsBy(How = How.CssSelector, Using = "div[class='ej-checkbox one-way-checkbox']")] private IWebElement OneWayCheckBox;
-        [FindsBy(How = How.CssSelector, Using = "input[name='origin']")] private IWebElement OriginAirportTextField;
-        [FindsBy(How = How.CssSelector, Using = "input[name='destination']")] private IWebElement DestinationAirportTextField;
+       //[FindsBy(How = How.CssSelector, Using = "input[id='one-way']")] private IWebElement OneWayCheckBox;
+        [FindsBy(How = How.CssSelector, Using = "input[class='ej-input origin ui-autocomplete-input']")] private IWebElement OriginAirportTextField;
+        [FindsBy(How = How.CssSelector, Using = "input[class='ej-input destination ui-autocomplete-input']")] private IWebElement DestinationAirportTextField;
+        [FindsBy(How = How.CssSelector, Using = "div[class='route-date-picker-control']")] private IWebElement DepartingCalendar;
+        //
         [FindsBy(How = How.CssSelector, Using = "button[ej-click-event='SubmitFlightSearch()']")] private IWebElement ShowFlightsButton;
+
 
 
         public void SelectOneWayCheckBox()
@@ -32,14 +37,19 @@ namespace PostBooking.Pages
 
         public void EnterOriginAirport()
         {
+            OriginAirportTextField.Clear();
             OriginAirportTextField.SendKeys("LTN"+ Keys.Enter);
         }
 
         public void EnterDestinationAirportTextField()
         {
-            DestinationAirportTextField.SendKeys("AMS" +Keys.Enter);
+            DestinationAirportTextField.SendKeys("BCN" + Keys.Enter);
         }
 
+        public void SelectDepartingCalendar()
+        {
+            DepartingCalendar.Click();
+        }
 
     }
 }

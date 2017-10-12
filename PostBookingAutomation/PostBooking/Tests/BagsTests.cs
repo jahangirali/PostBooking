@@ -22,8 +22,12 @@ namespace PostBooking
             cookiePolicyDraw.ClickAcceptButton();
 
             var searchPodPage = new SearchPodPage(driver);
+            searchPodPage.SelectOneWayCheckBox();
             searchPodPage.EnterOriginAirport();
-            searchPodPage.EnterDestinationAirportTextField();            
+            searchPodPage.EnterDestinationAirportTextField();
+            searchPodPage.SelectDepartingCalendar();
+
+
         }
 
     }
