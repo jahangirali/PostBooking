@@ -20,8 +20,8 @@ namespace PostBooking.Draws
         }
 
         [FindsBy(How = How.CssSelector, Using = "button[ng-click='DoConfirm()']")] private IWebElement GotItThanksButton;
-        [FindsBy(How = How.CssSelector, Using = "button[id='close-drawer-link']")] private IWebElement CloseDrawButton;
-        //close-drawer-link
+        [FindsBy(How = How.CssSelector, Using = "button[class='ej-link-button']")] private IWebElement CloseDrawButton;
+        
         public void ClickGotItThanksButton()
         {
             GotItThanksButton.Click();
