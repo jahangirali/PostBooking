@@ -4,19 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using PostBooking.Draws;
 using PostBooking.Pages;
 
-namespace PostBooking
+namespace PostBooking.Tests
 {
     [TestFixture]
-    public class BagsTests : TestBase
+    public class SearchPodPageTests: TestBase
     {
         [Test]
-        public void GoToBagsPage()
+        public void SpecialAssistanceDrawOpens()
         {
-
             var cookiePolicyDraw = new CookiePolicyDraw(driver);
 
             cookiePolicyDraw.ClickAcceptButton();
@@ -25,13 +23,15 @@ namespace PostBooking
             searchPodPage.SelectOneWayCheckBox();
             searchPodPage.EnterOriginAirport();
             searchPodPage.EnterDestinationAirportTextField();
-            searchPodPage.SelectDepartingCalendar();
-
+            
             var calendarDraw = new CalendarDraw(driver);
-            calendarDraw.SelectCalendarDate();
+            //calendarDraw.SelectCalendarDate();
             searchPodPage.ClickAddAdultButton();
-            searchPodPage.ClickShowFlightsButton();
+            searchPodPage.ClickSpecialAssistanceLink();
 
+            var specialAssistancePage = new SpecialAssistanceDraw(driver);
+            //specialAssistancePage.ClickGotItThanksButton();
+            specialAssistancePage.ClickCloseDrawButton();
         }
 
     }
