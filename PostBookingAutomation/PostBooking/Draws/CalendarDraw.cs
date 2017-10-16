@@ -24,7 +24,7 @@ namespace PostBooking.Draws
 
         public void SelectCalendarDate(DateTime calendarDate)
         {
-            SelectDateFromList(calendarDate.ToString("yyyy-MM-dd")).Click(Driver);
+            SelectDateFromList(calendarDate.ToString("yyyy-MM-dd")).Click();
         }
         private IWebElement SelectDateFromList(string dateTime)
         {

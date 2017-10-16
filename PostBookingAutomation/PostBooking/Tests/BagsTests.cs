@@ -28,7 +28,7 @@ namespace PostBooking
             searchPodPage.SelectDepartingCalendar();
 
             var calendarDraw = new CalendarDraw(driver);
-            calendarDraw.SelectCalendarDate();
+            //calendarDraw.SelectCalendarDate();
             searchPodPage.ClickAddAdultButton();
             searchPodPage.ClickShowFlightsButton();
 

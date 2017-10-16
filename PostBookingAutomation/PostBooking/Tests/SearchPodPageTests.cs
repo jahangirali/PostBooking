@@ -10,7 +10,7 @@ using PostBooking.Pages;
 namespace PostBooking.Tests
 {
     [TestFixture]
-    public class SearchPodPageTests: TestBase
+    public class SearchPodPageTests : TestBase
     {
         [Test]
         public void SpecialAssistanceDrawOpens()
@@ -20,10 +20,11 @@ namespace PostBooking.Tests
             cookiePolicyDraw.ClickAcceptButton();
 
             var searchPodPage = new SearchPodPage(driver);
+
             searchPodPage.SelectOneWayCheckBox();
             searchPodPage.EnterOriginAirport();
             searchPodPage.EnterDestinationAirportTextField();
-            
+
             var calendarDraw = new CalendarDraw(driver);
             //calendarDraw.SelectCalendarDate();
             searchPodPage.ClickAddAdultButton();
@@ -32,6 +33,23 @@ namespace PostBooking.Tests
             var specialAssistancePage = new SpecialAssistanceDraw(driver);
             //specialAssistancePage.ClickGotItThanksButton();
             specialAssistancePage.ClickCloseDrawButton();
+        }
+
+        [Test]
+        public void DefaultValuesSearchPodPage()
+        {
+            var cookiePolicyDraw = new CookiePolicyDraw(driver);
+            cookiePolicyDraw.ClickAcceptButton();
+
+            var searchPodPage = new SearchPodPage(driver);
+            
+            Assert.IsTrue(searchPodPage.IsTrueCheckBoxDisplayed());
+            Assert.IsTrue(searchPodPage.IsOriginAirportDisplayed());
+            Assert.IsTrue(searchPodPage.IsDestinationAirportDisplayed());
+            Assert.IsTrue(searchPodPage.IsNoOfAdultsDisplayed());
+            Assert.IsTrue(searchPodPage.IsNoOfChildrenDisplayed());
+            Assert.IsTrue(searchPodPage.IsNoOfInfantsDisplayed());
+            Assert.IsTrue(searchPodPage.IsShowFlightsButtonDisplayed());
         }
 
     }

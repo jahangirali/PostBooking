@@ -52,6 +52,21 @@ namespace PostBooking.Pages
             DepartingCalendar.Click();
         }
 
+        public void EnterNoOfAdults()
+        {
+            NoOfAdults.SendKeys("");
+        }
+
+        public void EnterNoOfChildren()
+        {
+            NoOfChildren.SendKeys("1");
+        }
+
+        public void EnterNoOfInfant()
+        {
+            NoOfInfants.SendKeys("1");
+        }
+
         public void ClickAddAdultButton()
         {
             PlusAdultButton.Click();
@@ -67,5 +82,36 @@ namespace PostBooking.Pages
             SpecialAssistanceLink.Click();
         }
 
+        public bool IsTrueCheckBoxDisplayed()
+        {
+            return OneWayCheckBox.Displayed;
+        }
+
+        public bool IsOriginAirportDisplayed()
+        {
+            return OriginAirportTextField.Displayed;
+        }
+
+        public bool IsDestinationAirportDisplayed()
+        {
+            return DestinationAirportTextField.Displayed;
+        }
+
+        public bool IsNoOfAdultsDisplayed()
+        {
+            return NoOfAdults.Displayed;
+        }
+        public bool IsNoOfChildrenDisplayed()
+        {
+            return NoOfAdults.Displayed;
+        }
+        public bool IsNoOfInfantsDisplayed()
+        {
+            return NoOfInfants.Displayed;
+        }
+        public bool IsShowFlightsButtonDisplayed()
+        {
+            return ShowFlightsButton.Displayed;
+        }
     }
 }
