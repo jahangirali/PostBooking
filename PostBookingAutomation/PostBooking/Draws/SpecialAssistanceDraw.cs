@@ -31,7 +31,5 @@ namespace PostBooking.Draws
         {
             CloseDrawButton.Click();
         }
-
-
     }
 }

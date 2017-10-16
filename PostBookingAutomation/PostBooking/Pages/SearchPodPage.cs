@@ -24,6 +24,9 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "input[class='ej-input origin ui-autocomplete-input']")] private IWebElement OriginAirportTextField;
         [FindsBy(How = How.CssSelector, Using = "input[class='ej-input destination ui-autocomplete-input']")] private IWebElement DestinationAirportTextField;
         [FindsBy(How = How.CssSelector, Using = "div[class='route-date-picker-control']")] private IWebElement DepartingCalendar;
+        [FindsBy(How = How.CssSelector, Using = "input[name='Adults']")] private IWebElement NoOfAdults;
+        [FindsBy(How = How.CssSelector, Using = "input[name='Children']")] private IWebElement NoOfChildren;
+        [FindsBy(How = How.CssSelector, Using = "input[id^='Infants']")] private IWebElement NoOfInfants;
         [FindsBy(How = How.CssSelector, Using = "button[class='quantity-button-add']")] private IWebElement PlusAdultButton;
         [FindsBy(How = How.CssSelector, Using = "button[ej-click-event='SubmitFlightSearch()']")] private IWebElement ShowFlightsButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='special-assistance button-link arrow-button']")] private IWebElement SpecialAssistanceLink;

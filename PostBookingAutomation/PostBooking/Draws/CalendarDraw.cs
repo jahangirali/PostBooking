@@ -11,7 +11,7 @@ namespace PostBooking.Draws
     public class CalendarDraw
     {
         private IWebDriver Driver { get; }
-        private static readonly By PageSelector = By.CssSelector("div[id='drawer-title']");
+        private static readonly By PageSelector = By.CssSelector("div[class='drawer-section routedatepicker']");
 
         public CalendarDraw(IWebDriver driver)
         {
@@ -19,17 +19,16 @@ namespace PostBooking.Draws
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.CssSelector, Using = "a[class='21']")] private IWebElement SelectDate;
+        [FindsBy(How = How.CssSelector, Using = "a[class='drawer-tab-content-wrapper']")] private IWebElement CalendarList;
         [FindsBy(How = How.CssSelector, Using = "div[class='close-drawer-button']")] private IWebElement CloseDepartureDateDraw;
 
-        public void SelectCalendarDate()
+        public void SelectCalendarDate(DateTime calendarDate)
         {
-            //TODO: Action to select a date. 
+            SelectDateFromList(calendarDate.ToString("yyyy-MM-dd")).Click(Driver);
         }
-
-        public void CloseCalendarDateDraw()
+        private IWebElement SelectDateFromList(string dateTime)
         {
-            CloseDepartureDateDraw.Click();
+            return CalendarList.FindElement(By.CssSelector($"div[data-date='{dateTime}'] a"));
         }
     }
 }
