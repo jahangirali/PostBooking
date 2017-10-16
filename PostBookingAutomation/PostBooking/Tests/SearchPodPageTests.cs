@@ -42,14 +42,18 @@ namespace PostBooking.Tests
             cookiePolicyDraw.ClickAcceptButton();
 
             var searchPodPage = new SearchPodPage(driver);
-            
-            Assert.IsTrue(searchPodPage.IsTrueCheckBoxDisplayed());
-            Assert.IsTrue(searchPodPage.IsOriginAirportDisplayed());
-            Assert.IsTrue(searchPodPage.IsDestinationAirportDisplayed());
-            Assert.IsTrue(searchPodPage.IsNoOfAdultsDisplayed());
-            Assert.IsTrue(searchPodPage.IsNoOfChildrenDisplayed());
-            Assert.IsTrue(searchPodPage.IsNoOfInfantsDisplayed());
-            Assert.IsTrue(searchPodPage.IsShowFlightsButtonDisplayed());
+
+            Assert.Multiple(() =>
+            {
+                Assert.IsTrue(searchPodPage.IsTrueCheckBoxDisplayed());
+                Assert.IsTrue(searchPodPage.IsOriginAirportDisplayed());
+                Assert.IsTrue(searchPodPage.IsDestinationAirportDisplayed());
+                Assert.IsTrue(searchPodPage.IsNoOfAdultsDisplayed());
+                Assert.IsTrue(searchPodPage.IsNoOfChildrenDisplayed());
+                Assert.IsTrue(searchPodPage.IsNoOfInfantsDisplayed());
+                Assert.IsTrue(searchPodPage.IsShowFlightsButtonDisplayed());
+
+            });
         }
 
     }
