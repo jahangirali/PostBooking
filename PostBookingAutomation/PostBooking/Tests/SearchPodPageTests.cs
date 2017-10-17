@@ -52,7 +52,6 @@ namespace PostBooking.Tests
                 Assert.IsTrue(searchPodPage.IsNoOfChildrenDisplayed());
                 Assert.IsTrue(searchPodPage.IsNoOfInfantsDisplayed());
                 Assert.IsTrue(searchPodPage.IsShowFlightsButtonDisplayed());
-
             });
         }
 

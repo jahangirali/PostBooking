@@ -21,15 +21,30 @@ namespace PostBooking.Draws
 
         [FindsBy(How = How.CssSelector, Using = "button[ng-click='DoConfirm()']")] private IWebElement GotItThanksButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='ej-link-button']")] private IWebElement CloseDrawButton;
-        
-        public void ClickGotItThanksButton()
-        {
-            GotItThanksButton.Click();
-        }
+        [FindsBy(How = How.CssSelector, Using = "a[href='/en/help/preparing-to-fly/special-assistance']")] private IWebElement ReducedMobilityLink;
+        [FindsBy(How = How.CssSelector, Using = "a[href='']")] private IWebElement ManageBookingsLink;
+
 
         public void ClickCloseDrawButton()
         {
             CloseDrawButton.Click();
         }
+
+        public void ClickManageBookingsLink()
+        {
+            ManageBookingsLink.Click();
+        }
+
+        public void ClickReducedMobilityLink()
+        {
+            ReducedMobilityLink.Click();
+        }
+
+        public void ClickGotItThanksButton()
+        {
+            GotItThanksButton.Click();
+        }
+
+       
     }
 }
