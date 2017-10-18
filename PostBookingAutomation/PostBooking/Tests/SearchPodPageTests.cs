@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using PostBooking.Draws;
 using PostBooking.Pages;
 
@@ -24,9 +25,10 @@ namespace PostBooking.Tests
             searchPodPage.SelectOneWayCheckBox();
             searchPodPage.EnterOriginAirport();
             searchPodPage.EnterDestinationAirportTextField();
+            searchPodPage.ClickDepartingCalendar();
 
             var calendarDraw = new CalendarDraw(driver);
-            //calendarDraw.SelectCalendarDate();
+            calendarDraw.SelectCalendarDate(new DateTime(2017-11-01));
             searchPodPage.ClickAddAdultButton();
             searchPodPage.ClickSpecialAssistanceLink();
 

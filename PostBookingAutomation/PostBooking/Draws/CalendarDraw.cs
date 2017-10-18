@@ -19,7 +19,8 @@ namespace PostBooking.Draws
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.CssSelector, Using = "a[class='drawer-tab-content-wrapper']")] private IWebElement CalendarList;
+        [FindsBy(How = How.CssSelector, Using = "div[class='route-date-picker-month']")] private IWebElement CalendarList;
+        //("") a[class='drawer-tab-content-wrapper']
         [FindsBy(How = How.CssSelector, Using = "div[class='close-drawer-button']")] private IWebElement CloseDepartureDateDraw;
 
         public void SelectCalendarDate(DateTime calendarDate)

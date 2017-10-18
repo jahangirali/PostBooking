@@ -25,7 +25,7 @@ namespace PostBooking
             searchPodPage.SelectOneWayCheckBox();
             searchPodPage.EnterOriginAirport();
             searchPodPage.EnterDestinationAirportTextField();
-            searchPodPage.SelectDepartingCalendar();
+            searchPodPage.ClickDepartingCalendar();
 
             var calendarDraw = new CalendarDraw(driver);
             //calendarDraw.SelectCalendarDate();

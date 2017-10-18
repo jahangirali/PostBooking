@@ -47,7 +47,7 @@ namespace PostBooking.Pages
             DestinationAirportTextField.SendKeys("BCN" + Keys.Enter);
         }
 
-        public void SelectDepartingCalendar()
+        public void ClickDepartingCalendar()
         {
             DepartingCalendar.Click();
         }

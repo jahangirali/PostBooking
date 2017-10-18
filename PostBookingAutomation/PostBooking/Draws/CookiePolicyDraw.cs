@@ -30,7 +30,6 @@ namespace PostBooking.Draws
 
         public void ClickAcceptButton()
         {
-            
             AcceptButton.Click();
             WaitUntilDrawerIsClosed();
         }
