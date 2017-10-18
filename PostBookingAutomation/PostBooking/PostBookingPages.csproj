@@ -59,6 +59,7 @@
     <Compile Include="Draws\CalendarDraw.cs" />
     <Compile Include="Draws\CookiePolicyDraw.cs" />
     <Compile Include="Draws\SpecialAssistanceDraw.cs" />
+    <Compile Include="Pages\PickFlightsPage.cs" />
     <Compile Include="Pages\SearchPodPage.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="Tests\BagsTests.cs" />

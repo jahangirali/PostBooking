@@ -14,12 +14,14 @@ namespace PostBooking.Pages
         private IWebDriver Driver { get; }
         private static readonly By PageSelector = By.CssSelector("div[class='ej-checkbox one-way-checkbox']");
 
-        public SearchPodPage(IWebDriver driver) 
+        public SearchPodPage(IWebDriver driver)
         {
             Driver = driver;
             PageFactory.InitElements(driver, this);
         }
-        
+
+        [FindsBy(How = How.CssSelector, Using = "a[class='ej-button rounded-corners']")] private IWebElement CheckIn;
+        [FindsBy(How = How.CssSelector, Using = "a[ng-click='DoSignInClick()']")] private IWebElement SignIn;
         [FindsBy(How = How.CssSelector, Using = "span[class='checkbox-label-text']")] private IWebElement OneWayCheckBox;
         [FindsBy(How = How.CssSelector, Using = "input[class='ej-input origin ui-autocomplete-input']")] private IWebElement OriginAirportTextField;
         [FindsBy(How = How.CssSelector, Using = "input[class='ej-input destination ui-autocomplete-input']")] private IWebElement DestinationAirportTextField;
@@ -30,6 +32,16 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "button[class='quantity-button-add']")] private IWebElement PlusAdultButton;
         [FindsBy(How = How.CssSelector, Using = "button[ej-click-event='SubmitFlightSearch()']")] private IWebElement ShowFlightsButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='special-assistance button-link arrow-button']")] private IWebElement SpecialAssistanceLink;
+
+        public void SelectCheckIn()
+        {
+            CheckIn.Click();
+        }
+
+        public void SelectSignIn()
+        {
+            SignIn.Click();
+        }
         
         public void SelectOneWayCheckBox()
         {
@@ -39,13 +51,15 @@ namespace PostBooking.Pages
         public void EnterOriginAirport()
         {
             OriginAirportTextField.Clear();
-            OriginAirportTextField.SendKeys("LTN"+ Keys.Enter);
+            OriginAirportTextField.SendKeys("LTN" + Keys.Enter);
         }
 
         public void EnterDestinationAirportTextField()
         {
             DestinationAirportTextField.SendKeys("BCN" + Keys.Enter);
         }
+
+
 
         public void ClickDepartingCalendar()
         {
