@@ -32,6 +32,9 @@ namespace PostBooking.Tests
             searchPodPage.ClickAddAdultButton();
             searchPodPage.ClickShowFlightsButton();
 
+            var pickFlightsPage = new PickFlightsPage(driver);
+            pickFlightsPage.SelectAFlight();
+            pickFlightsPage.SelectContinueButton();
             //var specialAssistancePage = new SpecialAssistanceDraw(driver);
             //specialAssistancePage.ClickGotItThanksButton();
             //specialAssistancePage.ClickCloseDrawButton();
