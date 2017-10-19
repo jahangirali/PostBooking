@@ -28,13 +28,13 @@ namespace PostBooking.Tests
             searchPodPage.ClickDepartingCalendar();
 
             var calendarDraw = new CalendarDraw(driver);
-            calendarDraw.SelectCalendarDate(new DateTime(2017-11-01));
+            calendarDraw.SelectCalendarDate(DateTime.UtcNow.AddDays(3));
             searchPodPage.ClickAddAdultButton();
-            searchPodPage.ClickSpecialAssistanceLink();
+            searchPodPage.ClickShowFlightsButton();
 
-            var specialAssistancePage = new SpecialAssistanceDraw(driver);
+            //var specialAssistancePage = new SpecialAssistanceDraw(driver);
             //specialAssistancePage.ClickGotItThanksButton();
-            specialAssistancePage.ClickCloseDrawButton();
+            //specialAssistancePage.ClickCloseDrawButton();
         }
 
         [Test]
