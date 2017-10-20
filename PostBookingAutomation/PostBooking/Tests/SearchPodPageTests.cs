@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using PostBooking.Common;
 using PostBooking.Draws;
 using PostBooking.Pages;
 
@@ -34,10 +35,10 @@ namespace PostBooking.Tests
 
             var pickFlightsPage = new PickFlightsPage(driver);
             pickFlightsPage.SelectAFlight();
-            pickFlightsPage.SelectContinueButton();
-            //var specialAssistancePage = new SpecialAssistanceDraw(driver);
-            //specialAssistancePage.ClickGotItThanksButton();
-            //specialAssistancePage.ClickCloseDrawButton();
+            var helpingHandPage = new HelpingHandPage(driver);
+            helpingHandPage.ClickContinueButton();
+            helpingHandPage.ClickSkipButton();
+            
         }
 
         [Test]
