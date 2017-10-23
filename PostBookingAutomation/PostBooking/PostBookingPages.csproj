@@ -57,9 +57,11 @@
   <ItemGroup>
     <Compile Include="Actions\Waits.cs" />
     <Compile Include="Common\HelpingHandPage.cs" />
+    <Compile Include="Draws\CabinBagsDraw.cs" />
     <Compile Include="Draws\CalendarDraw.cs" />
     <Compile Include="Draws\CookiePolicyDraw.cs" />
     <Compile Include="Draws\SpecialAssistanceDraw.cs" />
+    <Compile Include="Pages\HoldLuggagePage.cs" />
     <Compile Include="Pages\PickFlightsPage.cs" />
     <Compile Include="Pages\SearchPodPage.cs" />
     <Compile Include="Pages\SeatSelectionPage.cs" />
@@ -73,6 +75,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Data\" />
     <Folder Include="Navigation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

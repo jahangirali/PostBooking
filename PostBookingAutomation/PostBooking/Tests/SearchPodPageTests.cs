@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using PostBooking.Common;
 using PostBooking.Draws;
 using PostBooking.Pages;
@@ -35,10 +30,14 @@ namespace PostBooking.Tests
 
             var pickFlightsPage = new PickFlightsPage(driver);
             pickFlightsPage.SelectAFlight();
+
             var helpingHandPage = new HelpingHandPage(driver);
             helpingHandPage.ClickContinueButton();
             helpingHandPage.ClickSkipButton();
             
+            var holdLuggagePage = new HoldLuggagePage(driver);
+            holdLuggagePage.Clickkg15BagPlusButton();
+
         }
 
         [Test]
