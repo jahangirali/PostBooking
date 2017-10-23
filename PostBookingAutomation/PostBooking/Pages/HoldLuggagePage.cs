@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using PostBooking.Actions;
 
@@ -21,21 +16,28 @@ namespace PostBooking.Pages
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.CssSelector, Using = "input[ng-click='AddBagIfLimitNotReached(bagOption.Bag)']")] private IWebElement kg15BagPlusButton;
-        [FindsBy(How = How.CssSelector, Using = "div[class='title-content']")] private IWebElement kg15BagMinusButton;
-        [FindsBy(How = How.CssSelector, Using = "div[class='title-content']")] private IWebElement kg23BagPlusPlus;
-        [FindsBy(How = How.CssSelector, Using = "div[class='title-content']")] private IWebElement kg23BagMinusButton;
+        [FindsBy(How = How.CssSelector, Using = "input[ng-click='AddBagIfLimitNotReached(bagOption.Bag)']")] private IWebElement Add15kgBagButton;
+        [FindsBy(How = How.CssSelector, Using = "div[aria-label='Remove bag']")] private IWebElement Remove15kgBagButton;
+        [FindsBy(How = How.CssSelector, Using = "input[ng-click='AddBagIfLimitNotReached(bagOption.Bag)']")] private IWebElement Add23kgBagButton;
+        [FindsBy(How = How.CssSelector, Using = "div[class='title-content']")] private IWebElement Remove23kgBagButton;
+        [FindsBy(How = How.CssSelector, Using = "input[ng-click='OnDifferentWeightButtonClick()']")] private IWebElement AddSportsEquipmentButton;
+        [FindsBy(How = How.CssSelector, Using = "div[class='title-content']")] private IWebElement SelectCabinBagOnlyDraw;
+        //
 
-
-        public void Click15BagPlusButton()
+        public void ClickAdd15kgBagButton()
         {
-            kg15BagPlusButton.Click();    
+            Add15kgBagButton.Click();    
         }
 
-        public void Click15BagMinusButton()
+        public void ClickRemove15kgBagButton()
         {
-            kg15BagMinusButton.Click();
+            Remove15kgBagButton.Click();
 
+        }
+
+        public void ClickAddSportsEquipmentButton()
+        {
+            AddSportsEquipmentButton.Click();
         }
 
 

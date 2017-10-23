@@ -36,8 +36,12 @@ namespace PostBooking.Tests
             helpingHandPage.ClickSkipButton();
             
             var holdLuggagePage = new HoldLuggagePage(driver);
-            holdLuggagePage.Clickkg15BagPlusButton();
-
+            holdLuggagePage.ClickAdd15kgBagButton();
+            holdLuggagePage.ClickAdd15kgBagButton();
+            holdLuggagePage.ClickAdd15kgBagButton();
+            holdLuggagePage.ClickRemove15kgBagButton();
+            holdLuggagePage.ClickAddSportsEquipmentButton();
+            
         }
 
         [Test]
