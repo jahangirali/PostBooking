@@ -22,7 +22,7 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "div[class='title-content']")] private IWebElement Remove23kgBagButton;
         [FindsBy(How = How.CssSelector, Using = "input[ng-click='OnDifferentWeightButtonClick()']")] private IWebElement AddSportsEquipmentButton;
         [FindsBy(How = How.CssSelector, Using = "div[class='title-content']")] private IWebElement SelectCabinBagOnlyDraw;
-        //
+        
 
         public void ClickAdd15kgBagButton()
         {
@@ -32,7 +32,6 @@ namespace PostBooking.Pages
         public void ClickRemove15kgBagButton()
         {
             Remove15kgBagButton.Click();
-
         }
 
         public void ClickAddSportsEquipmentButton()

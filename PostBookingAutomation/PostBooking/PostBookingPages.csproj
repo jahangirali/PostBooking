@@ -64,6 +64,7 @@
     <Compile Include="Navigation\Navigator.cs" />
     <Compile Include="Pages\HoldLuggagePage.cs" />
     <Compile Include="Pages\PickFlightsPage.cs" />
+    <Compile Include="Pages\RegisterPage.cs" />
     <Compile Include="Pages\SearchPodPage.cs" />
     <Compile Include="Pages\SeatSelectionPage.cs" />
     <Compile Include="TestBase.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Draws\SignInDraw.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\HoldLuggagePageTests.cs" />
+    <Compile Include="Tests\RegisterNewPerson.cs" />
     <Compile Include="Tests\SearchPodPageTests.cs" />
   </ItemGroup>
   <ItemGroup>
