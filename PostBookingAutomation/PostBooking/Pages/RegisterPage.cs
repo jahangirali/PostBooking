@@ -21,19 +21,19 @@ namespace PostBooking.Pages
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.CssSelector, Using = "input[ng-click='AddBagIfLimitNotReached(bagOption.Bag)']")] private IWebElement EmailAddressField;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement EmailConfirmAddressField;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement PasswordField;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement PasswordConfirmField;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement TitleList;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement FirstNameField;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement SurnameField;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement Address1Field;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement Address2Field;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement TownCityField;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement PostcodeField;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement CountryField;
-        [FindsBy(How = How.CssSelector, Using = "div[class='EmailAddressCheck']")] private IWebElement MobileNumberField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='EmailAddress']")] private IWebElement EmailAddressField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='EmailAddressCheck']")] private IWebElement EmailConfirmAddressField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='Password']")] private IWebElement PasswordField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='PasswordCheck']")] private IWebElement PasswordConfirmField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='EmailAddressCheck']")] private IWebElement TitleList;
+        [FindsBy(How = How.CssSelector, Using = "input[id='FirstName']")] private IWebElement FirstNameField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='LastName']")] private IWebElement SurnameField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='Address1']")] private IWebElement Address1Field;
+        [FindsBy(How = How.CssSelector, Using = "input[id='Address2']")] private IWebElement Address2Field;
+        [FindsBy(How = How.CssSelector, Using = "input[id='City']")] private IWebElement TownCityField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='PostalCode']")] private IWebElement PostcodeField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='Country']")] private IWebElement CountryField;
+        [FindsBy(How = How.CssSelector, Using = "input[id='MobilePhone']")] private IWebElement MobileNumberField;
         [FindsBy(How = How.CssSelector, Using = "button[onclick='registerMember.SubmitForm()']")] private IWebElement RegisterNowButton;
 
 
