@@ -77,7 +77,7 @@ namespace PostBooking.Pages
             Address2Field.SendKeys("");
         }
 
-        public void EnterTown()
+        public void EnterTownCity()
         {
             TownCityField.SendKeys("Luton");
         }
