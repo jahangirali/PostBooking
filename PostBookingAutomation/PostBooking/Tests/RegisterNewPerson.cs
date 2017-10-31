@@ -22,7 +22,7 @@ namespace PostBooking.Tests
             searchPodPage.ClickSignIn();
 
             var signInDraw = new SignInDraw(driver);
-            signInDraw.ClickregisterHereLink();
+            signInDraw.ClickRegisterHereLink();
         }
     }
 }

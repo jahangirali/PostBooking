@@ -32,7 +32,7 @@ namespace PostBooking.Pages
             SignIn.Click();
         }
 
-        public void ClickregisterHereLink()
+        public void ClickRegisterHereLink()
         {
             Waits.WaitForElement(Driver, PageSelector);
             RegisterHereLink.Click();
