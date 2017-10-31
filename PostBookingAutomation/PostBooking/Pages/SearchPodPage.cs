@@ -38,7 +38,7 @@ namespace PostBooking.Pages
             CheckIn.Click();
         }
 
-        public void SelectSignIn()
+        public void ClickSignIn()
         {
             SignIn.Click();
         }
