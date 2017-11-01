@@ -22,12 +22,11 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "input[id='emailaddress']")] private IWebElement EmailAddressField;
         [FindsBy(How = How.CssSelector, Using = "input[id='password']")] private IWebElement PasswordField;
         [FindsBy(How = How.CssSelector, Using = "input[id='memberbookingreference']")] private IWebElement BookingReferenceField;
-        [FindsBy(How = How.CssSelector, Using = "a[href='register-button']")] private IWebElement RegisterButton;
-        [FindsBy(How = How.CssSelector, Using = "a[href='memberbookingreference']")] private IWebElement SignInButton;
+        [FindsBy(How = How.CssSelector, Using = "a[id='register-button']")] private IWebElement RegisterButton;
+        [FindsBy(How = How.CssSelector, Using = "input[id='sign-in-button']")] private IWebElement SignInButton;
         [FindsBy(How = How.CssSelector, Using = "input[id='memberbookingreference']")] private IWebElement ForgottenPasswordLink;
 
 
-        //$$("#btnRegister")
 
     }
 }

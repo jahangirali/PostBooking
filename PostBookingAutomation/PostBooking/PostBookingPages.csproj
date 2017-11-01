@@ -57,12 +57,14 @@
   <ItemGroup>
     <Compile Include="Actions\Waits.cs" />
     <Compile Include="Common\HelpingHandPage.cs" />
+    <Compile Include="Common\MainHeaderPage.cs" />
     <Compile Include="Draws\CabinBagsDraw.cs" />
     <Compile Include="Draws\CalendarDraw.cs" />
     <Compile Include="Draws\CookiePolicyDraw.cs" />
     <Compile Include="Draws\SpecialAssistanceDraw.cs" />
     <Compile Include="Navigation\Navigator.cs" />
     <Compile Include="Pages\HoldLuggagePage.cs" />
+    <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\PickFlightsPage.cs" />
     <Compile Include="Pages\RegisterPage.cs" />
     <Compile Include="Pages\SearchPodPage.cs" />
