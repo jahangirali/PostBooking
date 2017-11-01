@@ -18,8 +18,8 @@ namespace PostBooking
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
-            //driver.Navigate().GoToUrl("http://www.easyjet.com");
-            driver.Navigate().GoToUrl("https://uat2.tc-nonprod.easyjet.com/en/");
+            driver.Navigate().GoToUrl("http://www.easyjet.com");
+            //driver.Navigate().GoToUrl("https://uat2.tc-nonprod.easyjet.com/en/");
         }
 
         [TearDown]
