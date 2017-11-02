@@ -22,8 +22,8 @@ namespace PostBooking.Tests
             var mainHeaderPage = new MainHeaderPage(driver);
             mainHeaderPage.ClickManageBookingsLink();
 
-            var searchPodPage = new SearchPodPage(driver);
-            searchPodPage.ClickSignIn();
+            //var searchPodPage = new SearchPodPage(driver);
+            //searchPodPage.ClickSignIn();
 
             //var signInDraw = new SignInDraw(driver);
             //signInDraw.ClickRegisterHereLink();

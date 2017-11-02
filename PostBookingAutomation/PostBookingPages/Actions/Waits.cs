@@ -18,5 +18,12 @@ namespace PostBooking.Actions
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.ElementIsVisible(Selector));
         }
+
+        public static void WaitForElement(IWebDriver driver, IWebElement Selector)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.ElementToBeClickable(Selector));
+        }
+
     }
 }
