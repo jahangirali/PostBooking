@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System.Threading;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using PostBooking.Actions;
 
@@ -22,13 +23,13 @@ namespace PostBooking.Common
         public void ClickManageBookingsLink()
         {
             Waits.WaitForElement(Driver, ManageBookingsLink);
-
+            Thread.Sleep(2000);
             OpenQA.Selenium.Interactions.Actions act = new OpenQA.Selenium.Interactions.Actions(Driver);
             act.MoveToElement(ManageBookingsLink);
             act.Perform();
 
             ManageBookingsLink.Click();
-            
+            ManageBookingsLink.Click();
         }
     }
 }

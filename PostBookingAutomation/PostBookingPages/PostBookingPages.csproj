@@ -58,6 +58,7 @@
     <Compile Include="Draws\SignInDraw.cs" />
     <Compile Include="Draws\SpecialAssistanceDraw.cs" />
     <Compile Include="Navigation\Navigator.cs" />
+    <Compile Include="Pages\EditAccountPage.cs" />
     <Compile Include="Pages\HoldLuggagePage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\PickFlightsPage.cs" />
