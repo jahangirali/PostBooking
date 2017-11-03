@@ -27,6 +27,20 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "input[id='memberbookingreference']")] private IWebElement ForgottenPasswordLink;
 
 
+        public void EnterEmailAddress()
+        {
+            EmailAddressField.SendKeys("jahangir.ali@easyjet.com");
+        }
+
+        public void EnterPassword()
+        {
+            PasswordField.SendKeys("password123");
+        }
+
+        public void ClickSignInButton()
+        {
+            SignInButton.Click();
+        }
 
     }
 }
