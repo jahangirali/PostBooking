@@ -117,6 +117,7 @@ namespace PostBooking.Pages
         {
             return NoOfAdults.Displayed;
         }
+
         public bool IsNoOfInfantsDisplayed()
         {
             return NoOfInfants.Displayed;

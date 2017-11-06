@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support.UI;
 using PostBooking.Actions;
+using PostBookingPages.Data;
 
 namespace PostBooking.Pages
 {
@@ -25,7 +27,8 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "input[id='EmailAddressCheck']")] private IWebElement EmailConfirmAddressField;
         [FindsBy(How = How.CssSelector, Using = "input[id='Password']")] private IWebElement PasswordField;
         [FindsBy(How = How.CssSelector, Using = "input[id='PasswordCheck']")] private IWebElement PasswordConfirmField;
-        [FindsBy(How = How.CssSelector, Using = "input[id='EmailAddressCheck']")] private IWebElement TitleList;
+        [FindsBy(How = How.Id, Using = "TitleTypeCode")] private IWebElement TitleList;
+
         [FindsBy(How = How.CssSelector, Using = "input[id='FirstName']")] private IWebElement FirstNameField;
         [FindsBy(How = How.CssSelector, Using = "input[id='LastName']")] private IWebElement SurnameField;
         [FindsBy(How = How.CssSelector, Using = "input[id='Address1']")] private IWebElement Address1Field;
@@ -36,10 +39,14 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "input[id='MobilePhone']")] private IWebElement MobileNumberField;
         [FindsBy(How = How.CssSelector, Using = "div [id='btnRegister']")] private IWebElement RegisterNowButton;
 
-
-        public void EnterEmailAddress()
+        public void EnterCustomerDetails(Customer customer)
         {
-            EmailAddressField.SendKeys("jahangir.ali@easyjet.com");
+            EnterEmailAddress(customer.EmailAddress);
+        }
+
+        public void EnterEmailAddress(string EmailAddress)
+        {
+            EmailAddressField.SendKeys(EmailAddress);
         }
 
         public void EnterEmailConfirmAddress()
@@ -55,6 +62,13 @@ namespace PostBooking.Pages
         public void EnterPasswordConfirm()
         {
             PasswordConfirmField.SendKeys("password");
+        }
+
+        public void ClickTitleList()
+        {
+            TitleList.Click();
+            SelectElement Titles = new SelectElement(TitleList);
+            Titles.SelectByText("Mrs");
         }
 
         public void EnterFirstName()

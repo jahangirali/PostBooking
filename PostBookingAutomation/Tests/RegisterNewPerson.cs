@@ -9,6 +9,7 @@ using PostBooking.Actions;
 using PostBooking.Common;
 using PostBooking.Draws;
 using PostBooking.Pages;
+using PostBookingPages.Data;
 using PostBookingPages.Pages;
 
 namespace PostBooking.Tests
@@ -30,10 +31,12 @@ namespace PostBooking.Tests
             loginPage.ClickRegisterButton();
 
             var registerPage = new RegisterPage(driver);
+            var customer = new Customer();
             registerPage.EnterEmailAddress();
             registerPage.EnterEmailConfirmAddress();
             registerPage.EnterPassword();
             registerPage.EnterPasswordConfirm();
+            registerPage.ClickTitleList();
             registerPage.EnterFirstName();
             registerPage.EnterSurname();
             registerPage.EnterAddress1();
