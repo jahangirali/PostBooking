@@ -34,7 +34,7 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "input[id='PostalCode']")] private IWebElement PostcodeField;
         [FindsBy(How = How.CssSelector, Using = "input[id='Country']")] private IWebElement CountryField;
         [FindsBy(How = How.CssSelector, Using = "input[id='MobilePhone']")] private IWebElement MobileNumberField;
-        [FindsBy(How = How.CssSelector, Using = "button[onclick='registerMember.SubmitForm()']")] private IWebElement RegisterNowButton;
+        [FindsBy(How = How.CssSelector, Using = "div [id='btnRegister']")] private IWebElement RegisterNowButton;
 
 
         public void EnterEmailAddress()
