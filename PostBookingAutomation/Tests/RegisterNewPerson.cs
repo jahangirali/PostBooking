@@ -29,6 +29,20 @@ namespace PostBooking.Tests
 
             loginPage.ClickRegisterButton();
 
+            var registerPage = new RegisterPage(driver);
+            registerPage.EnterEmailAddress();
+            registerPage.EnterEmailConfirmAddress();
+            registerPage.EnterPassword();
+            registerPage.EnterPasswordConfirm();
+            registerPage.EnterFirstName();
+            registerPage.EnterSurname();
+            registerPage.EnterAddress1();
+            registerPage.EnterAddress2();
+            registerPage.EnterTownCity();
+            registerPage.EnterPostcode();
+            registerPage.EnterMobileNumber();
+            registerPage.ClickRegisterNowButton();
+
            // loginPage.LoggedIn();
            //var editAccountPage = new EditAccountPage(driver);
            // editAccountPage.ClickMyBookingsLink();
