@@ -21,7 +21,7 @@ namespace PostBooking.Tests
         {
             var cookiePolicyDraw = new CookiePolicyDraw(driver);
             cookiePolicyDraw.ClickAcceptButton();
-            
+
             var mainHeaderPage = new MainHeaderPage(driver);
             mainHeaderPage.ClickManageBookingsLink();
 
@@ -32,29 +32,9 @@ namespace PostBooking.Tests
 
             var registerPage = new RegisterPage(driver);
             var customer = new Customer();
-            registerPage.EnterEmailAddress();
-            registerPage.EnterEmailConfirmAddress();
-            registerPage.EnterPassword();
-            registerPage.EnterPasswordConfirm();
-            registerPage.ClickTitleList();
-            registerPage.EnterFirstName();
-            registerPage.EnterSurname();
-            registerPage.EnterAddress1();
-            registerPage.EnterAddress2();
-            registerPage.EnterTownCity();
-            registerPage.EnterPostcode();
-            registerPage.EnterMobileNumber();
-            registerPage.ClickRegisterNowButton();
+            registerPage.EnterCustomerDetails(customer);
+            
 
-           // loginPage.LoggedIn();
-           //var editAccountPage = new EditAccountPage(driver);
-           // editAccountPage.ClickMyBookingsLink();
-
-            //var searchPodPage = new SearchPodPage(driver);
-            //searchPodPage.ClickSignIn();
-
-            //var signInDraw = new SignInDraw(driver);
-            //signInDraw.ClickRegisterHereLink();
         }
     }
 }

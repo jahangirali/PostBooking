@@ -28,82 +28,102 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "input[id='Password']")] private IWebElement PasswordField;
         [FindsBy(How = How.CssSelector, Using = "input[id='PasswordCheck']")] private IWebElement PasswordConfirmField;
         [FindsBy(How = How.Id, Using = "TitleTypeCode")] private IWebElement TitleList;
-
         [FindsBy(How = How.CssSelector, Using = "input[id='FirstName']")] private IWebElement FirstNameField;
         [FindsBy(How = How.CssSelector, Using = "input[id='LastName']")] private IWebElement SurnameField;
         [FindsBy(How = How.CssSelector, Using = "input[id='Address1']")] private IWebElement Address1Field;
         [FindsBy(How = How.CssSelector, Using = "input[id='Address2']")] private IWebElement Address2Field;
         [FindsBy(How = How.CssSelector, Using = "input[id='City']")] private IWebElement TownCityField;
         [FindsBy(How = How.CssSelector, Using = "input[id='PostalCode']")] private IWebElement PostcodeField;
-        [FindsBy(How = How.CssSelector, Using = "input[id='Country']")] private IWebElement CountryField;
+        [FindsBy(How = How.Id, Using = "Country")] private IWebElement CountryList;
         [FindsBy(How = How.CssSelector, Using = "input[id='MobilePhone']")] private IWebElement MobileNumberField;
         [FindsBy(How = How.CssSelector, Using = "div [id='btnRegister']")] private IWebElement RegisterNowButton;
 
         public void EnterCustomerDetails(Customer customer)
         {
             EnterEmailAddress(customer.EmailAddress);
+            EnterEmailConfirmAddress(customer.EmailConfirmAddress);
+            EnterPassword(customer.Password);
+            EnterPasswordConfirm(customer.PasswordConfirm);
+            ClickTitleList(customer.Title);
+            EnterFirstName(customer.FirstName);
+            EnterSurname(customer.Surname);
+            EnterAddress1(customer.Address1);
+            EnterAddress2(customer.Address2);
+            EnterTownCity(customer.City);
+            EnterPostcode(customer.Postcode);
+            ClickCountryList(customer.Country);
+            EnterMobileNumber(customer.MobileNumber);
+
+            ClickRegisterNowButton();
         }
 
-        public void EnterEmailAddress(string EmailAddress)
+        private void EnterEmailAddress(string EmailAddress)
         {
             EmailAddressField.SendKeys(EmailAddress);
         }
 
-        public void EnterEmailConfirmAddress()
+        private void EnterEmailConfirmAddress(string EmailConfirmAddress)
         {
-            EmailConfirmAddressField.SendKeys("jahangir.ali@easyjet.com");
+            EmailConfirmAddressField.SendKeys(EmailConfirmAddress);
         }
 
-        public void EnterPassword()
+        private void EnterPassword(string Password)
         {
-            PasswordField.SendKeys("password");
+            PasswordField.SendKeys(Password);
         }
 
-        public void EnterPasswordConfirm()
+        private void EnterPasswordConfirm(string PasswordConfirm)
         {
-            PasswordConfirmField.SendKeys("password");
+            PasswordConfirmField.SendKeys(PasswordConfirm);
         }
 
-        public void ClickTitleList()
+        private void ClickTitleList(string Title)
         {
             TitleList.Click();
             SelectElement Titles = new SelectElement(TitleList);
-            Titles.SelectByText("Mrs");
+            Titles.SelectByText(Title);
         }
 
-        public void EnterFirstName()
+        private void EnterFirstName(string FirstName)
         {
-            FirstNameField.SendKeys("Homer");
+            FirstNameField.SendKeys(FirstName);
         }
 
-        public void EnterSurname()
+        private void EnterSurname(string Surname)
         {
-            SurnameField.SendKeys("Simpson");
+            SurnameField.SendKeys(Surname);
         }
 
-        public void EnterAddress1()
+        private void EnterAddress1(string Address1)
         {
-            Address1Field.SendKeys("123 High Street");
+            Address1Field.SendKeys(Address1);
         }
 
-        public void EnterAddress2()
+        private void EnterAddress2(string Address2)
         {
-            Address2Field.SendKeys("");
+            Address2Field.SendKeys(Address2);
         }
 
-        public void EnterTownCity()
+        private void EnterTownCity(string City)
         {
-            TownCityField.SendKeys("Luton");
+            TownCityField.SendKeys(City);
         }
 
-        public void EnterPostcode()
+        private void EnterPostcode(string Postcode)
         {
-            PostcodeField.SendKeys("LU1 1XP");
+            PostcodeField.SendKeys(Postcode);
         }
 
-        public void EnterMobileNumber()
+        private void ClickCountryList(string Country)
         {
-            MobileNumberField.SendKeys("0123456789");   
+            CountryList.Click();
+            SelectElement Countries = new SelectElement(CountryList);
+            Countries.SelectByText(Country);
+        }
+
+        private void EnterMobileNumber(string MobileNumber)
+        {
+            MobileNumberField.SendKeys(MobileNumber);   
         }
 
         public void ClickRegisterNowButton()

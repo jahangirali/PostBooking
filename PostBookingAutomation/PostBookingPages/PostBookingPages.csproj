@@ -52,6 +52,7 @@
     <Compile Include="Actions\Waits.cs" />
     <Compile Include="Common\HelpingHandPage.cs" />
     <Compile Include="Common\MainHeaderPage.cs" />
+    <Compile Include="Data\Customer.cs" />
     <Compile Include="Draws\CabinBagsDraw.cs" />
     <Compile Include="Draws\CalendarDraw.cs" />
     <Compile Include="Draws\CookiePolicyDraw.cs" />
@@ -70,9 +71,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
