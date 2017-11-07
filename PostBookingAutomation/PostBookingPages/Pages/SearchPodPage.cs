@@ -33,6 +33,13 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "button[ej-click-event='SubmitFlightSearch()']")] private IWebElement ShowFlightsButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='special-assistance button-link arrow-button']")] private IWebElement SpecialAssistanceLink;
 
+
+        public void EnterFlightDetails()
+        {
+         
+            CheckIn.Click();   
+        }
+
         public void SelectCheckIn()
         {
             CheckIn.Click();

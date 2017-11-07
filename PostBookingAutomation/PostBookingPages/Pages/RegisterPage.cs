@@ -126,7 +126,7 @@ namespace PostBooking.Pages
             MobileNumberField.SendKeys(MobileNumber);   
         }
 
-        public void ClickRegisterNowButton()
+        private void ClickRegisterNowButton()
         {
             RegisterNowButton.Click();
         }
