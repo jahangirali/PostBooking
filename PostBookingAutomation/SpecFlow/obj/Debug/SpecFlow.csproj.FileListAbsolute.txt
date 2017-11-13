@@ -4,5 +4,6 @@ C:\Code\Test\PostBooking\PostBookingAutomation\SpecFlow\bin\Debug\SpecFlow.pdb
 C:\Code\Test\PostBooking\PostBookingAutomation\SpecFlow\bin\Debug\Newtonsoft.Json.dll
 C:\Code\Test\PostBooking\PostBookingAutomation\SpecFlow\bin\Debug\TechTalk.SpecFlow.dll
 C:\Code\Test\PostBooking\PostBookingAutomation\SpecFlow\bin\Debug\Newtonsoft.Json.xml
+C:\Code\Test\PostBooking\PostBookingAutomation\SpecFlow\obj\Debug\SpecFlow.csprojResolveAssemblyReference.cache
 C:\Code\Test\PostBooking\PostBookingAutomation\SpecFlow\obj\Debug\SpecFlow.dll
 C:\Code\Test\PostBooking\PostBookingAutomation\SpecFlow\obj\Debug\SpecFlow.pdb

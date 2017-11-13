@@ -10,7 +10,6 @@ namespace PostBookingPages.Data
     {
         public bool OneWay { get; set; }
         public string OriginAirport { get; set; }
-
         public string DestinationAirport { get; set; }
         public string DepartingDate { get; set; }
         public string ReturningDate { get; set; }

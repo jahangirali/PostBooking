@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using PostBooking.Actions;
+using PostBookingPages.Data;
 
 namespace PostBooking.Pages
 {
@@ -26,36 +27,37 @@ namespace PostBooking.Pages
         [FindsBy(How = How.CssSelector, Using = "input[class='ej-input origin ui-autocomplete-input']")] private IWebElement OriginAirportTextField;
         [FindsBy(How = How.CssSelector, Using = "input[class='ej-input destination ui-autocomplete-input']")] private IWebElement DestinationAirportTextField;
         [FindsBy(How = How.CssSelector, Using = "div[class='route-date-picker-control']")] private IWebElement DepartingCalendar;
-        [FindsBy(How = How.CssSelector, Using = "input[name='Adults']")] private IWebElement NoOfAdults;
+        [FindsBy(How = How.CssSelector, Using = "input[name='NoOfAdults']")] private IWebElement NoOfAdults;
         [FindsBy(How = How.CssSelector, Using = "input[name='Children']")] private IWebElement NoOfChildren;
         [FindsBy(How = How.CssSelector, Using = "input[id^='Infants']")] private IWebElement NoOfInfants;
         [FindsBy(How = How.CssSelector, Using = "button[class='quantity-button-add']")] private IWebElement PlusAdultButton;
         [FindsBy(How = How.CssSelector, Using = "button[ej-click-event='SubmitFlightSearch()']")] private IWebElement ShowFlightsButton;
         [FindsBy(How = How.CssSelector, Using = "button[class='special-assistance button-link arrow-button']")] private IWebElement SpecialAssistanceLink;
 
-
-        public void EnterFlightDetails()
+        public void EnterFlightDetails(FlightSearch flightSearch)
         {
-         
-            CheckIn.Click();   
+            //CheckIn.Click();
+            SelectCheckIn(flightSearch.OneWay);
+            EnterOriginAirport(flightSearch.OriginAirport);
+
         }
 
-        public void SelectCheckIn()
+        private void SelectCheckIn(bool OneWay)
         {
-            CheckIn.Click();
+            CheckIn.Click(OneWay);
         }
 
-        public void ClickSignIn()
-        {
-            SignIn.Click();
-        }
+        //public void ClickSignIn()
+        //{
+        //    SignIn.Click();
+        //}
         
         public void SelectOneWayCheckBox()
         {
             OneWayCheckBox.Click();
         }
 
-        public void EnterOriginAirport()
+        public void EnterOriginAirport(string OriginAirport)
         {
             OriginAirportTextField.Clear();
             OriginAirportTextField.SendKeys("LTN" + Keys.Enter);
@@ -73,7 +75,7 @@ namespace PostBooking.Pages
 
         public void EnterNoOfAdults()
         {
-            NoOfAdults.SendKeys("");
+            NoOfAdults.SendKeys("1");
         }
 
         public void EnterNoOfChildren()

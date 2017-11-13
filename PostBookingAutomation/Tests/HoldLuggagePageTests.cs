@@ -14,7 +14,7 @@ namespace PostBooking.Tests
     public class HoldLuggagePageTests : TestBase
     {
         [Test]
-        public void MaxHoldLuggae()
+        public void MaxHoldLuggage()
         {
             var pickflight = Navigator.GoToPickFlightsPage(driver);
             //var holdLuggagePage = new HoldLuggagePage();

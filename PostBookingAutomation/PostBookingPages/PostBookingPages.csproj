@@ -53,6 +53,7 @@
     <Compile Include="Common\HelpingHandPage.cs" />
     <Compile Include="Common\MainHeaderPage.cs" />
     <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\FlightSearch.cs" />
     <Compile Include="Draws\CabinBagsDraw.cs" />
     <Compile Include="Draws\CalendarDraw.cs" />
     <Compile Include="Draws\CookiePolicyDraw.cs" />
