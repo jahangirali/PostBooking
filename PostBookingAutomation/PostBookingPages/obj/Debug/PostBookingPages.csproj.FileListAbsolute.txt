@@ -14,3 +14,4 @@ C:\Code\Test\PostBooking\PostBookingAutomation\PostBookingPages\bin\Debug\WebDri
 C:\Code\Test\PostBooking\PostBookingAutomation\PostBookingPages\bin\Debug\WebDriver.Support.xml
 C:\Code\Test\PostBooking\PostBookingAutomation\PostBookingPages\obj\Debug\PostBookingPages.dll
 C:\Code\Test\PostBooking\PostBookingAutomation\PostBookingPages\obj\Debug\PostBookingPages.pdb
+C:\Code\Test\PostBooking\PostBookingAutomation\PostBookingPages\obj\Debug\PostBookingPages.csprojResolveAssemblyReference.cache

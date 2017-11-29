@@ -20,7 +20,7 @@ namespace PostBooking
             var searchPodPage = new SearchPodPage(driver);
 
             searchPodPage.SelectOneWayCheckBox();
-            searchPodPage.EnterOriginAirport();
+            searchPodPage.EnterOriginAirportTextField();
             searchPodPage.EnterDestinationAirportTextField();
             searchPodPage.ClickDepartingCalendar();
 
@@ -42,7 +42,7 @@ namespace PostBooking
             var searchPodPage = new SearchPodPage(driver);
 
             searchPodPage.SelectOneWayCheckBox();
-            searchPodPage.EnterOriginAirport();
+            searchPodPage.EnterOriginAirportTextField();
             searchPodPage.EnterDestinationAirportTextField();
             searchPodPage.ClickDepartingCalendar();
 

@@ -19,7 +19,7 @@ namespace PostBooking.Tests
             var searchPodPage = new SearchPodPage(driver);
 
             searchPodPage.SelectOneWayCheckBox();
-            searchPodPage.EnterOriginAirport();
+            searchPodPage.EnterOriginAirportTextField();
             searchPodPage.EnterDestinationAirportTextField();
             searchPodPage.ClickDepartingCalendar();
 

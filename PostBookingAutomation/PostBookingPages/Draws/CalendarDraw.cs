@@ -29,6 +29,7 @@ namespace PostBooking.Draws
         {
             SelectDateFromList(calendarDate.ToString("yyyy-MM-dd")).Click();
         }
+
         private IWebElement SelectDateFromList(string dateTime)
         {
             return CalendarList.FindElement(By.CssSelector($"div[data-date='{dateTime}'] a"));

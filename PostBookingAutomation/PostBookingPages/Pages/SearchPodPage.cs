@@ -38,13 +38,14 @@ namespace PostBooking.Pages
         {
             //CheckIn.Click();
             SelectCheckIn(flightSearch.OneWay);
-            EnterOriginAirport(flightSearch.OriginAirport);
+            EnterOriginAirportTextField();
+            //EnterOriginAirportTextField(flightSearch.OriginAirport);
 
         }
 
         private void SelectCheckIn(bool OneWay)
         {
-            CheckIn.Click(OneWay);
+            CheckIn.Click();
         }
 
         //public void ClickSignIn()
@@ -57,7 +58,7 @@ namespace PostBooking.Pages
             OneWayCheckBox.Click();
         }
 
-        public void EnterOriginAirport(string OriginAirport)
+        public void EnterOriginAirportTextField()
         {
             OriginAirportTextField.Clear();
             OriginAirportTextField.SendKeys("LTN" + Keys.Enter);
