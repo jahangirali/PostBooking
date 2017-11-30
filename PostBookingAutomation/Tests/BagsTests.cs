@@ -28,7 +28,7 @@ namespace PostBooking
             searchPodPage.ClickDepartingCalendar();
 
             var calendarDraw = new CalendarDraw(driver);
-            calendarDraw.SelectCalendarDate(calendarDraw.SelectCalendarDate(2017-12-01));
+            //calendarDraw.SelectCalendarDate(calendarDraw.SelectCalendarDate(2017-12-01));
             searchPodPage.ClickAddAdultButton();
             searchPodPage.ClickShowFlightsButton();
             //yyyy-MM-dd

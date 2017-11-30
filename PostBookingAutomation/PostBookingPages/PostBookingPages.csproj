@@ -59,6 +59,7 @@
     <Compile Include="Draws\CookiePolicyDraw.cs" />
     <Compile Include="Draws\SignInDraw.cs" />
     <Compile Include="Draws\SpecialAssistanceDraw.cs" />
+    <Compile Include="MyBookingsPage.cs" />
     <Compile Include="Navigation\Navigator.cs" />
     <Compile Include="Pages\EditAccountPage.cs" />
     <Compile Include="Pages\HoldLuggagePage.cs" />

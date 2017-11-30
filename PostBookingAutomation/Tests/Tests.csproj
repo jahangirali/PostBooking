@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="BagsTests.cs" />
     <Compile Include="HoldLuggagePageTests.cs" />
+    <Compile Include="MyBookingsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterNewPerson.cs" />
     <Compile Include="SearchPodPageTests.cs" />
