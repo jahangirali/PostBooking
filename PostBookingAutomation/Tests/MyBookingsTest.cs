@@ -23,7 +23,7 @@ namespace Tests
 
             loginPage.LoggedIn();
             driver.Navigate().GoToUrl("https://www.132.test/EN/secure/MyEasyJet.mvc/AllBookings");
-            var test = driver.FindElement(By.ClassName("allBookingItems")).GetAttribute("ET56GX");
+            var test = driver.FindElement(By.Id("allBookingItems")).Text;
             Console.WriteLine(test);
             
         }

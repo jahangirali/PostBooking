@@ -17,11 +17,12 @@ namespace PostBookingPages
         public MyBookingsPage(IWebDriver driver)
         {
             Driver = driver;
-            Waits.WaitForElement(driver, By.CssSelector("input[id='EmailAddress']"));
+            Waits.WaitForElement(driver, By.CssSelector("a[class='headerii-link']"));
             PageFactory.InitElements(driver, this);
         }
 
         [FindsBy(How = How.CssSelector, Using = "input[id='EmailAddress']")] private IWebElement EmailAddressField;
+
 
     }
 }
